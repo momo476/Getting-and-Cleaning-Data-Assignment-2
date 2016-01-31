@@ -22,7 +22,7 @@ SubjectActivitySummary.txt
 
 The first tidy dataset TestAndTrainingMeansAndStDev.txt is created through the following steps found in run_analysis.R
 
-!. The script reads in the text files containing both the training and the test data.
+1. The script reads in the text files containing both the training and the test data.
 2. Activities and subject information is merged into each dataset independently along with column headers.
 3. The training data is appended to the test data creating a single data file, where the column names are updated to be more easily read.
 4. Using the combined dataset, a new dataset is creating containing only mean and standard deviation information.
