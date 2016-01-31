@@ -22,6 +22,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 Each variable is summarized in sets of mean (Mean Value) and std (Standard deviation) for each Subject and Activity Label
 
 | Variable Name | Signal Directions |
+|-------------|---------|
 | timeBodyAcc | XYZ |
 | timeGravityAcc | XYZ |
 | timeBodyAccJerk | XYZ |
@@ -35,6 +36,7 @@ Each variable is summarized in sets of mean (Mean Value) and std (Standard devia
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 | Variable Name |
+|-------------|---------|
 | timeBodyAccMag |
 | timeGravityAccMag |
 | timeBodyAccJerkMag |
@@ -50,6 +52,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 Each variable is a average for all variables found in TestAndTrainingMeansAndStDev.txt for each Subject and Activity Label
 
 | Variable Name | Signal Directions | Summary Level |
+|-------------|---------|
 | timeBodyAcc | XYZ | avg (average) |
 | timeGravityAcc | XYZ | avg (average) |
 | timeBodyAccJerk | XYZ | avg (average) |

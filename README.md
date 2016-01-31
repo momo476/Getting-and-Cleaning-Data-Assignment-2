@@ -22,18 +22,18 @@ SubjectActivitySummary.txt
 
 The first tidy dataset TestAndTrainingMeansAndStDev.txt is created through the following steps found in run_analysis.R
 
-* The script reads in the text files containing both the training and the test data.
-* Activities and subject information is merged into each dataset independently along with column headers.
-* The training data is appended to the test data creating a single data file, where the column names are updated to be more easily read.
-* Using the combined dataset, a new dataset is creating containing only mean and standard deviation information.
-* Save dataset to TestAndTrainingMeansAndStDev.txt
+!. The script reads in the text files containing both the training and the test data.
+2. Activities and subject information is merged into each dataset independently along with column headers.
+3. The training data is appended to the test data creating a single data file, where the column names are updated to be more easily read.
+4. Using the combined dataset, a new dataset is creating containing only mean and standard deviation information.
+5. Saves dataset to TestAndTrainingMeansAndStDev.txt
 
 The second tidy dataset SubjectActivitySummary.txt is created using the first tidy dataset through the following steps found in run_analysis.R
 
-* Update the column head names to include avg (average)
-* The data is grouped by activity and subject
-* Creates a summarized data set containing the average of each variable for each activity and each subject
-* Save dataset to SubjectActivitySummary.txt
+1. Update the column head names to include avg (average)
+2. The data is grouped by activity and subject
+3. Creates a summarized data set containing the average of each variable for each activity and each subject
+4. Saves dataset to SubjectActivitySummary.txt
 
 
 Notes: 
