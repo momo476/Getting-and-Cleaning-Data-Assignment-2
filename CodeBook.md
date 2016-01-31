@@ -52,7 +52,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 Each variable is a average for all variables found in TestAndTrainingMeansAndStDev.txt for each Subject and Activity Label
 
 | Variable Name | Signal Directions | Summary Level |
-|-------------|---------|
+|----------------|---------|---------------|
 | timeBodyAcc | XYZ | avg (average) |
 | timeGravityAcc | XYZ | avg (average) |
 | timeBodyAccJerk | XYZ | avg (average) |
