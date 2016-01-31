@@ -1,16 +1,11 @@
-## This script imports data for --------  
-## It creates a tidy data set combing data from training and testing data files
+## This script creates a tidy data set combing data from training and testing data files.
+## It then extracts only variables for mean and standard deviation.
+## Lastly, it creates a new dataset, at the grain of subject and activity, containing
+## the averages of each variable in the first dataset created.
 
-## !!!! Note to self:  May want to reorder to the order in the instructions !!!!!
-## Read.Table is smart enough to unzip the files 
-## filename
-## download file if does not exist
-## read in file
+#Import library
 
 library(dplyr)
-
-## Include code for downloading and unzipping data here then change working directory
-setwd("./UCI HAR Dataset/")
 
 ## Reads in features table used for column headersco
 features <- read.table("./features.txt", header = FALSE)
