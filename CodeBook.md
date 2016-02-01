@@ -11,7 +11,11 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'freq' to indicate frequency domain signals). 
 
 
+<<<<<<< HEAD
 ### Tidy Data Sets
+=======
+#### Tidy DataSets
+>>>>>>> origin/master
 | File Name | Description |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | TestAndTrainingMeansAndStDev.txt | Contains mean and standard deviation variables for time and frequency for both the training and the test data sets at the grain of subject and activity. |
