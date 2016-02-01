@@ -8,19 +8,19 @@
 library(dplyr)
 
 ## Reads in features table used for column headersco
-features <- read.table("./features.txt", header = FALSE)
+features <- read.table("UCI HAR Dataset/features.txt", header = FALSE)
 colHeaders <- features[,2]  ## assigns header names
-activityLabels <- read.table("./activity_labels.txt", header = FALSE, col.names = c("activityId","activity"))
+activityLabels <- read.table("UCI HAR Dataset/activity_labels.txt", header = FALSE, col.names = c("activityId","activity"))
 
 #################################################
 ##Create complete training dataset
 #################################################
 
 ## Reads in training data
-xTraining <- read.table("./train/X_train.txt", header = FALSE, col.names = colHeaders )
+xTraining <- read.table("UCI HAR Dataset/train/X_train.txt", header = FALSE, col.names = colHeaders )
 
-subTrain <- read.table("./train/subject_train.txt", header = FALSE, col.names = "subject")
-y_train <- read.table("./train/y_train.txt", header = FALSE, col.names = "activityId")
+subTrain <- read.table("UCI HAR Dataset/train/subject_train.txt", header = FALSE, col.names = "subject")
+y_train <- read.table("UCI HAR Dataset/train/y_train.txt", header = FALSE, col.names = "activityId")
 ytrainlbs <- merge(y_train, activityLabels, by = "activityId")
 
 ## Completes training dataset by merging all datasets into one
@@ -33,10 +33,10 @@ trainingData$activity <- as.character(ytrainlbs[,2])
 ##Create complete testing dataset
 #################################################
 
-xtesting <- read.table("./test/X_test.txt", header = FALSE, col.names = colHeaders )
-subtest <- read.table("./test/subject_test.txt", header = FALSE, col.names = "subject")
+xtesting <- read.table("UCI HAR Dataset/test/X_test.txt", header = FALSE, col.names = colHeaders )
+subtest <- read.table("UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = "subject")
 
-y_test <- read.table("./test/y_test.txt", header = FALSE, col.names = "activityId")
+y_test <- read.table("UCI HAR Dataset/test/y_test.txt", header = FALSE, col.names = "activityId")
 ytestlbs <- merge(y_test, activityLabels, by = "activityId")
 
 ## Completes testing dataset by merging all datasets into one
@@ -60,7 +60,7 @@ colnames(TestAndTrainingMeansAndStDev) <- sub("^t","time",names(TestAndTrainingM
 colnames(TestAndTrainingMeansAndStDev) <- sub("^f","freq",names(TestAndTrainingMeansAndStDev))
 
 #This may take a few seconds to write the table to a text file
-write.table(TestAndTrainingMeansAndStDev, "./TestAndTrainingMeansAndStDev.txt", sep="\t", row.names = FALSE, append = FALSE, quote = FALSE)
+write.table(TestAndTrainingMeansAndStDev, "UCI HAR Dataset/TestAndTrainingMeansAndStDev.txt", sep="\t", row.names = FALSE, append = FALSE, quote = FALSE)
 
 
 ## Updates column head names
@@ -74,6 +74,6 @@ avgActivity <- group_by(avgActivity, activity, subject)
 SubjectActivitySummary <-  summarise_each(avgActivity, funs(mean(., na.rm=TRUE)))
 
 #Saves summarized dataset with means and standard deviations only to a file
-write.table(SubjectActivitySummary, "./SubjectActivitySummary.txt", sep="\t", row.names = FALSE, append = FALSE, quote = FALSE)
+write.table(SubjectActivitySummary, "UCI HAR Dataset/SubjectActivitySummary.txt", sep="\t", row.names = FALSE, append = FALSE, quote = FALSE)
 
 
