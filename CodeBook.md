@@ -1,5 +1,5 @@
-Two datasets were created using the original data from the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
-A full description of the original dataset can be found at the website.
+Two data sets were created using the original data from the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+A full description of the original data set can be found at the website.
 
 Feature Selection 
 =================
@@ -11,10 +11,10 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'freq' to indicate frequency domain signals). 
 
 
-#### Tidy Data sets
+### Tidy Data Sets
 | File Name | Description |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TestAndTrainingMeansAndStDev.txt | Contains mean and standard deviation variables for time and frequency for both the training and the test datasets at the grain of subject and activity. |
+| TestAndTrainingMeansAndStDev.txt | Contains mean and standard deviation variables for time and frequency for both the training and the test data sets at the grain of subject and activity. |
 | SubjectActivitySummary.txt | Contains the average of each variable for each activity and each subject. |
 
 
